@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_soc_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_soc" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="2,502.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="4,058.001 ns"></ZoomEndTime>
+      <Cursor1Time time="2,780.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="155"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject type="logic" fp_name="/tb_soc/uut/u_clk_wiz/clk_out1">
+      <obj_property name="ElementShortName">clk_out1</obj_property>
+      <obj_property name="ObjectShortName">clk_out1</obj_property>
+      <obj_property name="CustomSignalColor">#800000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_soc/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_soc/uut/datapath/_IR">
+      <obj_property name="ElementShortName">_IR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">_IR[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_soc/uut/datapath/o_insn">
+      <obj_property name="ElementShortName">o_insn[15:0]</obj_property>
+      <obj_property name="ObjectShortName">o_insn[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_soc/uut/datapath/_PC">
+      <obj_property name="ElementShortName">_PC[15:0]</obj_property>
+      <obj_property name="ObjectShortName">_PC[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_soc/uut/datapath/_data">
+      <obj_property name="ElementShortName">_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">_data[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_soc/uut/datapath/i2c/saved_addr">
+      <obj_property name="ElementShortName">saved_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">saved_addr[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_soc/uut/datapath/i2c/saved_data">
+      <obj_property name="ElementShortName">saved_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">saved_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_soc/uut/datapath/i2c/_i2c_control">
+      <obj_property name="ElementShortName">_i2c_control[7:0]</obj_property>
+      <obj_property name="ObjectShortName">_i2c_control[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_soc/par_i">
+      <obj_property name="ElementShortName">par_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">par_i[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_soc/par_o">
+      <obj_property name="ElementShortName">par_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">par_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_soc/i_rx_line">
+      <obj_property name="ElementShortName">i_rx_line</obj_property>
+      <obj_property name="ObjectShortName">i_rx_line</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_soc/o_tx_line">
+      <obj_property name="ElementShortName">o_tx_line</obj_property>
+      <obj_property name="ObjectShortName">o_tx_line</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/tb_soc/uut/datapath/uart/_scon">
+      <obj_property name="ElementShortName">_scon[15:0]</obj_property>
+      <obj_property name="ObjectShortName">_scon[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_soc/o_i2c_scl">
+      <obj_property name="ElementShortName">o_i2c_scl</obj_property>
+      <obj_property name="ObjectShortName">o_i2c_scl</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_soc/o_i2c_sda">
+      <obj_property name="ElementShortName">o_i2c_sda</obj_property>
+      <obj_property name="ObjectShortName">o_i2c_sda</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/tb_soc/uut/datapath/i2c/o_error">
+      <obj_property name="ElementShortName">o_error</obj_property>
+      <obj_property name="ObjectShortName">o_error</obj_property>
+   </wvobject>
+</wave_config>

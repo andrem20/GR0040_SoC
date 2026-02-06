@@ -1,0 +1,19 @@
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_soc.uut.datapath.romh_insn.inst.native_mem_module.blk_mem_gen_v8_4_11_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_soc.uut.datapath.roml_insn.inst.native_mem_module.blk_mem_gen_v8_4_11_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_soc.uut.datapath.ramh_data.inst.native_mem_module.blk_mem_gen_v8_4_11_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module tb_soc.uut.datapath.raml_data.inst.native_mem_module.blk_mem_gen_v8_4_11_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+WARNING in tb_soc.uut.datapath.regfile.inst at time                 4100 ns: 
+Reading from out-of-range address. Max address in tb_soc.uut.datapath.regfile.inst is          15
+WARNING in tb_soc.uut.datapath.regfile.inst at time                 4100 ns: 
+Reading from out-of-range address. Max address in tb_soc.uut.datapath.regfile.inst is          15
+$finish called at time : 396 ns : File "/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/sim_1/new/tb_soc.v" Line 70

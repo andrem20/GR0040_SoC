@@ -1,0 +1,14 @@
+transcript off
+onbreak {quit -force}
+onerror {quit -force}
+transcript on
+
+asim +access +r +m+BRAM_8_512_L  -L xil_defaultlib -L xpm -L blk_mem_gen_v8_4_11 -L unisims_ver -L unimacro_ver -L secureip -O5 xil_defaultlib.BRAM_8_512_L xil_defaultlib.glbl
+
+do {BRAM_8_512_L.udo}
+
+run 1000ns
+
+endsim
+
+quit -force

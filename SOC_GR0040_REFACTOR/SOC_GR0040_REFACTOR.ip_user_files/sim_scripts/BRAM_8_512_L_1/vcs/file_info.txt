@@ -1,0 +1,6 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../home/andre/Vivado/2025.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,incdir="../../../../../../../../Vivado/2025.1/data/rsb/busdef"
+xpm_memory.sv,systemverilog,xpm,../../../../home/andre/Vivado/2025.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,incdir="../../../../../../../../Vivado/2025.1/data/rsb/busdef"
+xpm_VCOMP.vhd,vhdl,xpm,../../../../home/andre/Vivado/2025.1/data/ip/xpm/xpm_VCOMP.vhd,incdir="../../../../../../../../Vivado/2025.1/data/rsb/busdef"
+blk_mem_gen_v8_4.v,verilog,blk_mem_gen_v8_4_11,../../../ipstatic/simulation/blk_mem_gen_v8_4.v,incdir="../../../../../../../../Vivado/2025.1/data/rsb/busdef"
+BRAM_8_512_L.v,verilog,xil_defaultlib,../../../../SOC_GR0040_REFACTOR.gen/sources_1/ip/BRAM_8_512_L_1/sim/BRAM_8_512_L.v,incdir="../../../../../../../../Vivado/2025.1/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

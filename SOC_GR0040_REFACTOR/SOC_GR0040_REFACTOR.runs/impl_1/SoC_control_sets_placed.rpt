@@ -1,0 +1,119 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Sun Jan 25 11:51:57 2026
+| Host         : macaco running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_control_sets -verbose -file SoC_control_sets_placed.rpt
+| Design       : SoC
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    41 |
+|    Minimum number of control sets                        |    41 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   132 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    41 |
+| >= 0 to < 4        |    12 |
+| >= 4 to < 6        |     6 |
+| >= 6 to < 8        |     4 |
+| >= 8 to < 10       |     7 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     2 |
+| >= 16              |     8 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              38 |           19 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              64 |           27 |
+| Yes          | No                    | No                     |              78 |           37 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             152 |           56 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+-----------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
+|       Clock Signal       |                    Enable Signal                    |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------+-----------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/receive_uart/_shift_reg[7]_i_1__0_n_0 |                                                  |                1 |              1 |         1.00 |
+|  u_clk_wiz/inst/clk_out1 |                                                     | datapath/alu/arithmetic_unit/_loaded_reg         |                1 |              1 |         1.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/transmit_uart/o_tx_out_i_1_n_0        | _rst_sys                                         |                1 |              1 |         1.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/receive_uart/_shift_reg[6]_i_1__0_n_0 |                                                  |                1 |              1 |         1.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/receive_uart/_shift_reg[5]_i_1__0_n_0 |                                                  |                1 |              1 |         1.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/receive_uart/_shift_reg[4]_i_1__0_n_0 |                                                  |                1 |              1 |         1.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/transmit_uart/_counter[15]_i_2__0_n_0 |                                                  |                1 |              1 |         1.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/receive_uart/_shift_reg[0]_i_1__0_n_0 |                                                  |                1 |              1 |         1.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/receive_uart/_shift_reg[1]_i_1__0_n_0 |                                                  |                1 |              1 |         1.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/receive_uart/_shift_reg[2]_i_1__0_n_0 |                                                  |                1 |              1 |         1.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/receive_uart/_shift_reg[3]_i_1__0_n_0 |                                                  |                1 |              1 |         1.00 |
+|  u_clk_wiz/inst/clk_out1 |                                                     | _rst_sync[2]_i_1_n_0                             |                2 |              3 |         1.50 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/receive_uart/_state_rx                |                                                  |                2 |              4 |         2.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/transmit_uart/_state_tx[3]_i_1_n_0    |                                                  |                1 |              4 |         4.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/i2c/state[3]_i_1_n_0                       | _rst_sys                                         |                2 |              4 |         2.00 |
+|  u_clk_wiz/inst/clk_out1 | controlunit/_int_waiting[4]_i_1_n_0                 | _rst_sys                                         |                2 |              5 |         2.50 |
+|  u_clk_wiz/inst/clk_out1 | controlunit/_int_next                               | controlunit/_int_next[4]_i_1_n_0                 |                1 |              5 |         5.00 |
+|  u_clk_wiz/inst/clk_out1 |                                                     | controlunit/o_int[4]_i_1_n_0                     |                2 |              5 |         2.50 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/receive_uart/_counter[15]_i_2_n_0     | datapath/uart/receive_uart/_counter[15]_i_1_n_0  |                1 |              6 |         6.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/_scon[7]_i_1_n_0                      | _rst_sys                                         |                3 |              6 |         2.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/alu/arithmetic_unit/_loaded_reg            | _rst_sys                                         |                5 |              6 |         1.20 |
+|  u_clk_wiz/inst/clk_out1 | datapath/alu/arithmetic_unit/_loaded_reg            |                                                  |                5 |              7 |         1.40 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/receive_uart/D[0]                     | _rst_sys                                         |                4 |              8 |         2.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/transmit_uart/_sbuf_tx[7]_i_1_n_0     | _rst_sys                                         |                1 |              8 |         8.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/transmit_uart/_valid                  |                                                  |                2 |              8 |         4.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/i2c/counter[7]_i_1_n_0                     | _rst_sys                                         |                3 |              8 |         2.67 |
+|  u_clk_wiz/inst/clk_out1 | datapath/par/o_o_8bits[7]_i_1_n_0                   |                                                  |                3 |              8 |         2.67 |
+|  u_clk_wiz/inst/clk_out1 | datapath/alu/arithmetic_unit/_loaded_reg            | datapath/alu/arithmetic_unit/_rst_sync_reg[2]_1  |                2 |              8 |         4.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/_baudrate_div                         | _rst_sys                                         |                5 |              9 |         1.80 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/receive_uart/_counter[15]_i_2_n_0     |                                                  |                4 |             10 |         2.50 |
+|  u_clk_wiz/inst/clk_out1 | datapath/alu/arithmetic_unit/E[0]                   |                                                  |                5 |             12 |         2.40 |
+|  u_clk_wiz/inst/clk_out1 | datapath/i2c/_i2c_divider                           | _rst_sys                                         |                5 |             15 |         3.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/uart/transmit_uart/_counter[15]_i_2__0_n_0 | datapath/uart/transmit_uart/_counter[15]_i_1_n_0 |                4 |             15 |         3.75 |
+|  u_clk_wiz/inst/clk_out1 | datapath/timer/_cnt_init_reg[15]_i_1_n_0            | _rst_sys                                         |                5 |             16 |         3.20 |
+|  u_clk_wiz/inst/clk_out1 | controlunit/o_int_reg[2]_1[0]                       | _rst_sys                                         |                9 |             16 |         1.78 |
+|  u_clk_wiz/inst/clk_out1 |                                                     | datapath/i2c/counter2[0]_i_1_n_0                 |                4 |             16 |         4.00 |
+|  u_clk_wiz/inst/clk_out1 | datapath/i2c/saved_addr                             |                                                  |                6 |             16 |         2.67 |
+|  u_clk_wiz/inst/clk_out1 | datapath/i2c/_i2c_data_0                            | _rst_sys                                         |                3 |             16 |         5.33 |
+|  u_clk_wiz/inst/clk_out1 | datapath/alu/arithmetic_unit/we                     |                                                  |                4 |             32 |         8.00 |
+|  u_clk_wiz/inst/clk_out1 |                                                     |                                                  |               19 |             38 |         2.00 |
+|  u_clk_wiz/inst/clk_out1 |                                                     | _rst_sys                                         |               18 |             39 |         2.17 |
++--------------------------+-----------------------------------------------------+--------------------------------------------------+------------------+----------------+--------------+
+
+

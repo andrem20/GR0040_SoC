@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1769341869">
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="SoC_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS" Name="SoC_routed.rqs"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="RDI-RDI" Name="SoC.vdi"/>
+  <File Type="BG-DRC" Name="SoC.drc"/>
+  <File Type="BG-BGN" Name="SoC.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="SoC.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="SoC.ltx"/>
+  <File Type="PL-LTX-FILE" Name="SoC_pld.ltx"/>
+  <File Type="BOOT-LTX-FILE" Name="SoC_boot.ltx"/>
+  <File Type="LTX-FILE" Name="SoC.ltx"/>
+  <File Type="PL-BIF-FILE" Name="SoC_pld.bif"/>
+  <File Type="BOOT-BIF-FILE" Name="SoC_boot.bif"/>
+  <File Type="BIF-FILE" Name="SoC.bif"/>
+  <File Type="MMI-FILE" Name="SoC.mmi"/>
+  <File Type="RBD_FILE" Name="SoC.rbd"/>
+  <File Type="NPI_FILE" Name="SoC.npi"/>
+  <File Type="PL_UNMASK_RCDO_FILE" Name="SoC_pld_unmask.rcdo"/>
+  <File Type="PL_UNMASK_MARKER_RCDO_FILE" Name="SoC_pld_unmask_markers.rcdo"/>
+  <File Type="PL_MASK_RCDO_FILE" Name="SoC_pld_mask.rcdo"/>
+  <File Type="PL_MARKER_RCDO_FILE" Name="SoC_pld_markers.rcdo"/>
+  <File Type="PL-CLEAR-RCDO-FILE" Name="SoC_pld_clear.rcdo"/>
+  <File Type="PL-RCDO-FILE" Name="SoC_pld.rcdo"/>
+  <File Type="PL_UNMASK_RNPI_FILE" Name="SoC_pld_unmask.rnpi"/>
+  <File Type="PL_SHUTDOWN_RNPI_FILE" Name="SoC_pld_shutdown.rnpi"/>
+  <File Type="PL_MASK_RNPI_FILE" Name="SoC_pld_mask.rnpi"/>
+  <File Type="PL_MARKER_RNPI_FILE" Name="SoC_pld_markers.rnpi"/>
+  <File Type="PL_RNPI_FILE" Name="SoC_pld.rnpi"/>
+  <File Type="BOOT_MARKER_RNPI_FILE" Name="SoC_boot_markers.rnpi"/>
+  <File Type="BOOT_RNPI_FILE" Name="SoC_boot.rnpi"/>
+  <File Type="MARKER-RCDO-FILE" Name="SoC_markers.rcdo"/>
+  <File Type="MARKER-RNPI-FILE" Name="SoC_markers.rnpi"/>
+  <File Type="RCDO-FILE" Name="SoC.rcdo"/>
+  <File Type="RNPI_FILE" Name="SoC.rnpi"/>
+  <File Type="CFI_FILE" Name="SoC.cfi"/>
+  <File Type="RCFI_FILE" Name="SoC.rcfi"/>
+  <File Type="PL-PDI-FILE" Name="SoC_pld.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="SoC_boot.pdi"/>
+  <File Type="PDI-FILE" Name="SoC.pdi"/>
+  <File Type="BITSTR-MMI" Name="SoC.mmi"/>
+  <File Type="BITSTR-BMM" Name="SoC_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="SoC.nky"/>
+  <File Type="BITSTR-RBT" Name="SoC.rbt"/>
+  <File Type="BITSTR-MSK" Name="SoC.msk"/>
+  <File Type="BG-BIN" Name="SoC.bin"/>
+  <File Type="BG-BIT" Name="SoC.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="SoC_bus_skew_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="SoC_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="SoC_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="SoC_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="SoC_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="SoC_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="SoC_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="SoC_postroute_physopt.dcp"/>
+  <File Type="ROUTE-RQS-PB" Name="SoC_rqs_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="SoC_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="SoC_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW" Name="SoC_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="SoC_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-SIMILARITY" Name="SoC_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="SoC_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-TIMING-PB" Name="SoC_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="SoC_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="SoC_route_status.pb"/>
+  <File Type="ROUTE-STATUS" Name="SoC_route_status.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="SoC_power_routed.rpx"/>
+  <File Type="ROUTE-PWR-SUM" Name="SoC_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="SoC_power_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="SoC_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="SoC_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="SoC_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="SoC_drc_routed.rpx"/>
+  <File Type="ROUTE-DRC-PB" Name="SoC_drc_routed.pb"/>
+  <File Type="ROUTE-DRC" Name="SoC_drc_routed.rpt"/>
+  <File Type="ROUTE-UTIL-PB" Name="SoC_utilization_routed.pb"/>
+  <File Type="ROUTE-UTIL" Name="SoC_utilization_routed.rpt"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="SoC_routed_bb.dcp"/>
+  <File Type="ROUTE-DCP" Name="SoC_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="SoC_routed_error.dcp"/>
+  <File Type="PHYSOPT-TIMING" Name="SoC_timing_summary_physopted.rpt"/>
+  <File Type="PHYSOPT-DRC" Name="SoC_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="SoC_physopt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="SoC_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="SoC_postplace_pwropt.dcp"/>
+  <File Type="PLACE-RQA-PB" Name="SoC_rqa_placed.pb"/>
+  <File Type="PLACE-TIMING" Name="SoC_timing_summary_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="SoC_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="SoC_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-CTRL" Name="SoC_control_sets_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="SoC_utilization_placed.pb"/>
+  <File Type="PLACE-UTIL" Name="SoC_utilization_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="SoC_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-IO" Name="SoC_io_placed.rpt"/>
+  <File Type="PLACE-DCP" Name="SoC_placed.dcp"/>
+  <File Type="PWROPT-TIMING" Name="SoC_timing_summary_pwropted.rpt"/>
+  <File Type="PWROPT-DRC" Name="SoC_drc_pwropted.rpt"/>
+  <File Type="PWROPT-DCP" Name="SoC_pwropt.dcp"/>
+  <File Type="OPT-RQA-PB" Name="SoC_rqa_opted.pb"/>
+  <File Type="OPT-TIMING" Name="SoC_timing_summary_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="SoC.hwdef"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="SoC_methodology_drc_opted.rpt"/>
+  <File Type="OPT-UTIL-PB" Name="SoC_utilization_opted.pb"/>
+  <File Type="OPT-UTIL" Name="SoC_utilization_opted.rpt"/>
+  <File Type="OPT-DRC" Name="SoC_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="SoC_opt.dcp"/>
+  <File Type="INIT-TIMING" Name="SoC_timing_summary_init.rpt"/>
+  <File Type="REPORTS-TCL" Name="SoC_reports.tcl"/>
+  <File Type="PA-TCL" Name="SoC.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/BRAM_8_512_H_1/BRAM_8_512_H.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Constants.vh">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ALU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ControlUnit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Datapath.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ctrl_dec.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ctrl_enc.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/i2c_master.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/pario.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/timer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_rx.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/uart_tx.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/SoC.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/ROM_8_512_H/romh_insn.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/ROM_8_512_L/roml_insn.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/BRAM_8_512_H_1/ramh_data.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/BRAM_8_512_L_1/raml_data.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="SoC"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/Pin_configuration.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/Pin_configuration.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/SoC.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="ROM_8_512_L"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="BRAM_8_512_L"/>
+  <BlockFileSet Type="BlockSrcs" Name="ROM_8_512_H"/>
+  <BlockFileSet Type="BlockSrcs" Name="regfile16x16"/>
+</GenRun>

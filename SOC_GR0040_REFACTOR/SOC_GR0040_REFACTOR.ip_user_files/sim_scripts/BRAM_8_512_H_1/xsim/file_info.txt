@@ -1,0 +1,2 @@
+BRAM_8_512_H.v,verilog,xil_defaultlib,../../../../SOC_GR0040_REFACTOR.gen/sources_1/ip/BRAM_8_512_H_1/sim/BRAM_8_512_H.v,incdir="../../../../../../../../Vivado/2025.1/data/rsb/busdef"
+glbl.v,Verilog,xil_defaultlib,glbl.v

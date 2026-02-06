@@ -1,0 +1,172 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Sun Jan 25 11:52:07 2026
+| Host         : macaco running 64-bit Ubuntu 22.04.5 LTS
+| Command      : report_methodology -file SoC_methodology_drc_routed.rpt -pb SoC_methodology_drc_routed.pb -rpx SoC_methodology_drc_routed.rpx
+| Design       : SoC
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max checks: <unlimited>
+             Checks found: 20
++-----------+----------+------------------------------------------+--------+
+| Rule      | Severity | Description                              | Checks |
++-----------+----------+------------------------------------------+--------+
+| HPDR-1    | Warning  | Port pin direction inconsistency         | 1      |
+| TIMING-9  | Warning  | Unknown CDC Logic                        | 1      |
+| TIMING-10 | Warning  | Missing property on synchronizer         | 1      |
+| XDCH-2    | Warning  | Same min and max delay values on IO port | 17     |
++-----------+----------+------------------------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+HPDR-1#1 Warning
+Port pin direction inconsistency  
+Hierarchical port(pin) o_i2c_scl direction INOUT is not consistent with the directions of the cell pins/ports found at that level of the netlist hierarchy. Please review the design and consider changing the port(pin) direction. Both drivers and loads were expected for the net (o_i2c_scl) connected to this Port, but both were not found.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+XDCH-2#1 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'i_par_i[0]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock i_clk 0.000 [get_ports {i_par_i[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 41)
+Related violations: <none>
+
+XDCH-2#2 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'i_par_i[1]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock i_clk 0.000 [get_ports {i_par_i[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 41)
+Related violations: <none>
+
+XDCH-2#3 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'i_par_i[2]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock i_clk 0.000 [get_ports {i_par_i[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 41)
+Related violations: <none>
+
+XDCH-2#4 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'i_par_i[3]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock i_clk 0.000 [get_ports {i_par_i[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 41)
+Related violations: <none>
+
+XDCH-2#5 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'i_par_i[4]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock i_clk 0.000 [get_ports {i_par_i[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 41)
+Related violations: <none>
+
+XDCH-2#6 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'i_par_i[5]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock i_clk 0.000 [get_ports {i_par_i[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 41)
+Related violations: <none>
+
+XDCH-2#7 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'i_par_i[6]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock i_clk 0.000 [get_ports {i_par_i[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 41)
+Related violations: <none>
+
+XDCH-2#8 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'i_par_i[7]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock i_clk 0.000 [get_ports {i_par_i[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 41)
+Related violations: <none>
+
+XDCH-2#9 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port 'i_rst' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock i_clk 0.000 [get_ports i_rst]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 42)
+Related violations: <none>
+
+XDCH-2#10 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'o_par_o[0]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock i_clk 0.000 [get_ports {o_par_o[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 45)
+Related violations: <none>
+
+XDCH-2#11 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'o_par_o[1]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock i_clk 0.000 [get_ports {o_par_o[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 45)
+Related violations: <none>
+
+XDCH-2#12 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'o_par_o[2]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock i_clk 0.000 [get_ports {o_par_o[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 45)
+Related violations: <none>
+
+XDCH-2#13 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'o_par_o[3]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock i_clk 0.000 [get_ports {o_par_o[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 45)
+Related violations: <none>
+
+XDCH-2#14 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'o_par_o[4]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock i_clk 0.000 [get_ports {o_par_o[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 45)
+Related violations: <none>
+
+XDCH-2#15 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'o_par_o[5]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock i_clk 0.000 [get_ports {o_par_o[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 45)
+Related violations: <none>
+
+XDCH-2#16 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'o_par_o[6]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock i_clk 0.000 [get_ports {o_par_o[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 45)
+Related violations: <none>
+
+XDCH-2#17 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'o_par_o[7]' relative to clock i_clk for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock i_clk 0.000 [get_ports {o_par_o[*]}]
+/home/andre/Documents/Processor/SOC_GR0040/SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new/Pin_configuration.xdc (Line: 45)
+Related violations: <none>
+
+
