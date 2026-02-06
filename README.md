@@ -207,7 +207,7 @@ The included test program validates:
 Master's in Industrial Electronics and Computers
 
 - André Martins (PG60192)
-- Mariana Martins (PG60211)
+- Mariana Martins (PG60211) - (https://github.com/Mariana2724)
 
 **Supervisor**: Professor Adriano Tavares
 
