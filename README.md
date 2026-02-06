@@ -95,6 +95,7 @@ The GR0040 is a 16-bit non-pipelined RISC processor optimized for FPGA implement
 │   └── timing.xdc            # Timing constraints
 └── docs/
     └── G4_Processor.pdf      # Complete project report
+    └── G4_Processor.ppt.pdf  # Project Presentation
 ```
 
 ## 🚀 Getting Started
