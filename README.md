@@ -76,26 +76,30 @@ The GR0040 is a 16-bit non-pipelined RISC processor optimized for FPGA implement
 
 ```
 .
-├── src/
-│   ├── ControlUnit.v         # Instruction decoder and control signal generator
-│   ├── Datapath.v            # Execution engine and functional units
-│   ├── ALU.v                 # Arithmetic Logic Unit
-│   ├── regfile16x16.v        # 16×16-bit register file
-│   ├── timer.v               # Timer/Counter peripheral
-│   ├── uart.v                # UART peripheral
-│   ├── i2c.v                 # I²C master peripheral
-│   ├── pario.v               # Parallel I/O peripheral
-│   └── SoC.v                 # Top-level system integration
+├── SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/sources_1/new/
+│   ├── ControlUnit.v                 # Instruction decoder and control signal generator
+│   ├── Datapath.v                    # Execution engine and functional units
+│   ├── ALU.v                         # Arithmetic Logic Unit
+│   ├── regfile16x16.v                # 16×16-bit register file
+│   ├── timer.v                       # Timer/Counter peripheral
+│   ├── uart.v                        # UART peripheral
+│   ├── i2c.v                         # I²C master peripheral
+│   ├── pario.v                       # Parallel I/O peripheral
+│   └── SoC.v                         # Top-level system integration
 ├── assembler/
-│   └── assembler.c           # Assembly-to-machine-code converter
-├── testbench/
-│   └── tb_soc.v              # Complete system testbench
-├── constraints/
-│   ├── pins.xdc              # Pin assignments
-│   └── timing.xdc            # Timing constraints
+│   └── assembler.c                   # Assembly-to-machine-code converter
+├── SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/sim_1/new
+│   └── tb_soc.v                      # Complete system testbench
+├── SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/constrs_1/new
+│   └── Pin_configuration.xdc         # Pin assignments
+├── SOC_GR0040_REFACTOR/
+│   ├── timing_report.txt             # Vivado Timing Report
+│   ├── utilization_report.txt        # Vivado Utilization Report
+│   ├── SimulationConfiguration.wcfg  # Configuration with relevant signals
+│   └── SOC_GR0040_REFACTOR.xpr       # Vivado Project File
 └── documentation/
-    └── G4_Processor.pdf      # Complete project report
-    └── G4_Processor.ppt.pdf  # Project Presentation
+    └── G4_Processor.pdf              # Complete project report
+    └── G4_Processor.ppt.pdf          # Project Presentation
 ```
 
 ## 🚀 Getting Started
