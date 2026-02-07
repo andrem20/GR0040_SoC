@@ -77,13 +77,17 @@ The GR0040 is a 16-bit non-pipelined RISC processor optimized for FPGA implement
 ```
 .
 ├── SOC_GR0040_REFACTOR/SOC_GR0040_REFACTOR.srcs/sources_1/new/
+│   ├── Constants.vh                  # Macros definition header file
 │   ├── ControlUnit.v                 # Instruction decoder and control signal generator
 │   ├── Datapath.v                    # Execution engine and functional units
 │   ├── ALU.v                         # Arithmetic Logic Unit
-│   ├── regfile16x16.v                # 16×16-bit register file
+│   ├── ctrl_dec.v                    # Control Bus Decoder
+│   ├── ctrl_enc.v                    # Control Bus Encoder
 │   ├── timer.v                       # Timer/Counter peripheral
 │   ├── uart.v                        # UART peripheral
-│   ├── i2c.v                         # I²C master peripheral
+│   ├── uart_tx.v                     # UART Tx Implementation
+│   ├── uart_rx.v                     # UART Rx Implementation
+│   ├── i2c_master.v                  # I²C master peripheral
 │   ├── pario.v                       # Parallel I/O peripheral
 │   └── SoC.v                         # Top-level system integration
 ├── assembler/
