@@ -215,7 +215,7 @@ The included test program validates:
 ## Team
 
 **University of Minho - School of Engineering**  
-Master's in Industrial Electronics and Computers
+Master's in Industrial Electronics and Computers, specialization in Embedded Systems and Computers
 
 - André Martins (PG60192)
 - Mariana Martins (PG60211) - (https://github.com/Mariana2724)
