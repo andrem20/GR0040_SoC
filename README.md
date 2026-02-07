@@ -25,10 +25,12 @@ The GR0040 is a 16-bit non-pipelined RISC processor optimized for FPGA implement
 - **Five instruction formats**: rr, ri, rri, i12, br
 - **22 base operations** plus 16 branch variants
 
-### Instruction Set Enhancements
+### Enhancements
 - **Shift operations**: SLL, SRL, SLA, SRA
 - **RETI instruction**: Dedicated return-from-interrupt
 - **Interrupt support**: Hardware-managed context switching
+- **UART**: UART Tx and Rx implementation, supporting different baudrates
+- **I²C Master**: I²C Master with address byte + one data byte, supporting different baudrates
 
 ### Memory Organization
 ```
