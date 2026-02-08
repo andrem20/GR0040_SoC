@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 
-//`define ULTRA_FAST_MODE
+`define ULTRA_FAST_MODE
 
-// Communication Frequency
+// Communication Frequency - Consider 50MHz CLK frequency 
 `ifdef FAST_MODE     // 400kps
     `define DIVIDER_RST 16'h007D
 `elsif FAST_MODE_PLUS // 1Mbps
@@ -18,11 +18,11 @@
 module i2c_master(
     input [`CONTROL_MSB:0] i_ctrl,              // Peripheral Control Bus
     input i_sel,                                // Peripheral Select
-    input [`DATA_MSB:0] i_data_to_store,   // Data to Store in the Peripheral at a specified address    
+    input [`DATA_MSB:0] i_data_to_store,        // Data to Store in the Peripheral at a specified address    
 	output o_rdy,                               // Feedback Signal 
     output reg [`DATA_MSB:0] o_data,            // Data to Load from the Peripheral at a specified address <-> NOT USING IT RIGHT NOW  
-	inout o_i2c_sda,
-	inout wire o_i2c_scl
+	inout io_i2c_sda,
+	output wire o_i2c_scl
 	);
 	
 /*************************************************************************************
@@ -30,25 +30,24 @@ module i2c_master(
  ************************************************************************************/ 
  
     /* I2C SFRs */  
-    parameter I2C_DIVIDER = 16'h1300;
-    parameter I2C_DATA = 16'h1302;
-    
-    parameter FIRST_FRAME = 7;              // I2C first frame end : 0->7
-    
-    parameter I2C_CONTROL = 16'h1304;      // 1B
-    
+    parameter I2C_DIVIDER = 16'h1300;       
+    parameter I2C_CONTROL = 16'h1302;       // 1B
         // I2C_CONTROL bits
         parameter bit_EN = 0;
         parameter bit_START = 1;
     
-   // parameter I2C_STATUS = 16'h1306;
-    
+    parameter I2C_DATA_SIZE = 16'h1303;     // 1B - MAX data size is 255 bytes
+    parameter I2C_DATA = 16'h1304;          // 1B
+    parameter I2C_ADDR = 16'h1305;
+        parameter bit_R_W = 0;
 
     /* Actual Registers */
     reg [`DATA_MSB:0] _i2c_divider;
-    reg [`DATA_MSB:0] _i2c_data;
     reg [7:0] _i2c_control;
-     
+    reg [7:0] _i2c_data_size;
+    reg [7:0] _i2c_data;  
+    reg [7:0] _i2c_addr; 
+    
 /*************************************************************************************
  * I2C States
  ************************************************************************************/ 
@@ -81,6 +80,11 @@ module i2c_master(
 	reg i2c_clk_falling_en;
 	reg clk_enable;
 	
+	// Data Buffer
+	reg [7:0] _i2c_buffer [0:254];    
+	
+	reg [7:0] _data_size_counter;
+	
 /*************************************************************************************
  * CONTROL BUS DECODING
  ************************************************************************************/    
@@ -108,26 +112,39 @@ module i2c_master(
  ************************************************************************************/ 	
     assign ready = ((_rst == 0) && (state == IDLE)) ? 1 : 0;
 	assign o_i2c_scl = (i2c_scl_enable == 0 ) ? 1 : i2c_clk;
-	assign o_i2c_sda = (write_enable == 1) ? sda_out : 1'bz;
+	assign io_i2c_sda = (write_enable == 1) ? sda_out : 1'bz;
 	
 /*************************************************************************************
  * REGISTER CONFIGURATION
  ************************************************************************************/
+  integer i;
         
     always @(posedge _clk) begin
         if (_rst) begin
             _i2c_divider <= `DIVIDER_RST;
-            _i2c_control <= 8'h00;
-            _i2c_data <= 16'h0000;
+            _i2c_control <= 8'h0;
+            _i2c_data <= 8'h0;
+            _i2c_data_size <= 8'h0;     // Default to 0, must be initialized by instruction
+             _i2c_addr <= 8'h0;
+            _data_size_counter <= 8'h0;
+            
+            for (i = 0; i < 255; i = i + 1) begin
+                _i2c_buffer[i] <= 8'd0;
+            end     
         end else if (_we[0]) begin
            case (_ad)
                 I2C_DIVIDER[7:0]:   _i2c_divider <=  i_data_to_store;
                 I2C_CONTROL[7:0]:   _i2c_control <=  i_data_to_store;
-                I2C_DATA[7:0]:      _i2c_data <= i_data_to_store;
+                I2C_DATA_SIZE[7:0]: _i2c_data_size <= i_data_to_store;
+                I2C_DATA[7:0]:      
+                    if (_data_size_counter < _i2c_data_size) begin
+                            _i2c_buffer[_data_size_counter] <= i_data_to_store;
+                            _data_size_counter <= _data_size_counter + 1;
+                    end
            endcase
-        end else if (state == STOP) begin
-            // Auto-clear START bit after transaction completes
-            _i2c_control[bit_START] <= 1'b0;
+        end else if (state == STOP) begin 
+            _i2c_control[bit_START] <= 1'b0;    // Auto-clear START bit after transaction completes
+            _i2c_data_size <= 8'h0;             // Just to make sure
         end
     end 
 
@@ -176,7 +193,7 @@ module i2c_master(
 
 // IMPLEMENTATION
 
-// I2C posedge Validation	
+// I2C posedge - data MUST be stable	
 	always @(posedge _clk) begin
 		if(_rst == 1) begin
 			state <= IDLE;
@@ -190,8 +207,9 @@ module i2c_master(
                     IDLE: begin
                         if (_i2c_control[bit_START]) begin
                             state <= START;
-                            saved_addr <= _i2c_data[7:0];  
-                            saved_data <= _i2c_data[15:8]; 
+                            saved_addr <= _i2c_addr[7:0];  // last bit indicates R/!W
+                            _i2c_data <= _i2c_buffer[_data_size_counter];
+                          //  saved_data <= _i2c_data[7:0]; 
                         end
                         else state <= IDLE;
                     end
@@ -208,11 +226,13 @@ module i2c_master(
                     end
     
                     READ_ACK: begin
-                        if (o_i2c_sda == 0) begin
-                            counter <= `DATA_I2C-1; // Set bit number for transmission
-                            if(saved_addr[0] == 0) state <= WRITE_DATA;
+                        if (io_i2c_sda == 0) begin          // ACK received
+                            counter <= `DATA_I2C-1;         // Set bit number for transmission
+                            _data_size_counter <= 8'h0; 
+                            if(saved_addr[bit_R_W] == 0) 
+                                state <= WRITE_DATA;
                             else state <= READ_DATA;
-                        end else state <= STOP;
+                        end else state <= STOP;             // NACK received 
                     end
     
                     WRITE_DATA: begin
@@ -222,12 +242,27 @@ module i2c_master(
                     end
                     
                     READ_ACK2: begin
-                        // FIXED: Always go to STOP to complete the transaction
-                        state <= STOP_PREP;
+                      if (io_i2c_sda == 0) begin            // ACK received
+                         _data_size_counter = _data_size_counter + 1;
+                        if (_data_size_counter == _i2c_data_size) begin
+                            _data_size_counter <= 8'h0;
+                            state <= STOP_PREP;
+                        end 
+                        else begin 
+                            counter <= `DATA_I2C-1;         // Set bit number for transmission
+                            if(saved_addr[bit_R_W] == 0) begin
+                                _i2c_data <= _i2c_buffer[_data_size_counter];
+                                state <= WRITE_DATA;
+                            end else state <= READ_DATA;
+                        end
+                      end else begin
+                        _data_size_counter <= 8'h0;
+                        state <= STOP_PREP;          // NACK received                 
+                      end
                     end
     
                     READ_DATA: begin
-                        o_data[counter] <= o_i2c_sda;
+                        o_data[counter] <= io_i2c_sda;
                         if (counter == 0) state <= WRITE_ACK;
                         else counter <= counter - 1;
                     end
@@ -248,7 +283,7 @@ module i2c_master(
         end
 	end
 	
-// I2C negedge Validation	
+// I2C negedge - data can be changed	
 	always @(posedge _clk) begin
 		if(_rst == 1) begin
 			write_enable <= 0;
@@ -274,11 +309,10 @@ module i2c_master(
 				
 				WRITE_DATA: begin 
 					write_enable <= 1;
-					sda_out <= saved_data[counter];
+					sda_out <= _i2c_data[counter];
 				end
 				
 				READ_ACK2: begin
-					// FIXED: Release SDA to receive ACK from slave
 					write_enable <= 0; 
 				end
 				
